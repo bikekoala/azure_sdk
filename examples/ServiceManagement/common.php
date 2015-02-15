@@ -1,0 +1,35 @@
+<?PHP
+require realpath(__DIR__ . '/../../') . '/WindowsAzure/WindowsAzure.php';
+
+// sunxw
+$sub_id = '5da09225-d2f5-4399-819c-1ba4357b3d6e';
+$cert_pem_str = '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';
+
+
+$cert_pem_path = '/tmp/' . $sub_id;
+$status = pfx2pem($cert_pem_str, $cert_pem_path);
+if (true === $status) {
+    $conn_string = "SubscriptionID={$sub_id};CertificatePath={$cert_pem_path}";
+} else {
+    echo $status, PHP_EOL;
+    exit;
+}
+
+/**
+ * 微软pfx文件(base64)转换为openssl的pem文件
+ *
+ * @param string $pfx_base64
+ * @param string $pem_path
+ * @return bool|string
+ */
+function pfx2pem($pfx_base64, $pem_path) {
+    $password = '';
+    $results = array();
+    $worked = openssl_pkcs12_read(base64_decode($pfx_base64), $results, $password);
+    if ($worked) {
+        file_put_contents($pem_path, implode(PHP_EOL, $results));
+        return true;
+    } else {
+        return openssl_error_string();
+    }
+}
